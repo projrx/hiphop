@@ -12,6 +12,15 @@
 				height: 445px !important;
 				max-height: 445px !important;
 			}
+
+			@media (max-width: 576px) {
+				.slideimg { 
+					max-width: 540px; 
+				height: 140px !important;
+				max-height: 140px !important;
+				}
+				}
+
 			.fslider{
 				 margin: 1px; 
             border: 0px solid #e2b608; 

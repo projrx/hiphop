@@ -1,6 +1,6 @@
 	<!-- Top Bar
 		============================================= -->
-		<div id="top-bar">
+		<div id="top-bar" style="background: #ecbf0c">
 
 			<div class="container clearfix">
 
@@ -71,8 +71,8 @@
 				<!-- Logo
 				============================================= -->
 				<div id="logo">
-					<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
-					<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+					<a href="index.html" class="standard-logo" data-dark-logo="images/.png"><img src="images/logo.png" alt="Logo"></a>
+					<a href="index.html" class="retina-logo" data-dark-logo="images/logo.png"><img src="images/logo.png" alt="Logo"></a>
 				</div><!-- #logo end -->
 
 				<ul class="header-extras">
