@@ -164,7 +164,7 @@
 
 			<!-- Copyrights
 			============================================= -->
-			<div id="copyrights" style="background: #000;color: #fff">
+			<div id="copyrights" style="background: #ecbf0c;color: #fff">
 
 				<div class="container clearfix">
 
