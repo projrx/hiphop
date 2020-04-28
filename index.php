@@ -8,6 +8,13 @@
 		<title>HipHop Kids | Homepage</title>
 
 		<style type="text/css">
+
+			body{
+				font-family: Tahoma !important;
+    font-weight: 100 !important;
+    font-size: 16px;
+}
+			}
 			.slideimg{
 				height: 645px !important;
 				max-height: 645px !important;
@@ -143,6 +150,62 @@
 
 			}
 
+
+
+			.sale-item {
+    color: #fff;
+    background: #fdd01f;
+}
+
+.icn {
+    -webkit-transition: opacity 1s ease-out;
+    width: 50px;
+    height: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+.portfolio-desc {
+
+    text-align: center;
+}
+
+.portfolio-desc h3 a {
+    color: #222;
+    font-size: 15px;
+    font-weight: 200;
+}
+.portfolio-desc span {
+    display: block;
+    margin-top: 3px;
+    color: #fdd01f;
+    font-size: 15px;
+    font-weight: 100;
+}
+.und{
+	text-decoration: line-through;;
+}
+			#footer {
+    position: relative;
+    background-color: #EEE;
+    border-top: none;
+    color: white;
+        padding: 20px;
+
+}
+.ftext{
+	color:white;
+}
+
 			
 		</style>
 
@@ -164,15 +227,26 @@
 					<div class="slider-wrap">
 						<div class="slide">
 							<a href="#">
-								<img class="slideimg" src="images/logo2.jpg" alt="Shop Image">
+								<img class="slideimg" src="images/slider/b1.jpg" alt="Shop Image">
+							</a>
+						</div>
+						<div class="slide">
+							<a href="#">
+								<img class="slideimg" src="images/slider/b2.jpg" alt="Shop Image">
+							</a>
+						</div>
+						<div class="slide">
+							<a href="#">
+								<img class="slideimg" src="images/slider/b3.jpg" alt="Shop Image">
+							</a>
+						</div>
+						<div class="slide">
+							<a href="#">
+								<img class="slideimg" src="images/slider/b4.jpg" alt="Shop Image">
 							</a>
 						</div>
 
-						<div class="slide">
-							<a href="#">
-								<img class="slideimg" src="images/slider/slider2.jpg" alt="Shop Image">
-							</a>
-						</div>
+
 
 					</div>
 				</div>
@@ -244,6 +318,8 @@
 					<div class="iportfolio">
 						<div class="portfolio-image">
 							<a href="#">
+								<div class="sale-item icn">-30%</div>
+
 								<img src="images/products/boy11.jpg" alt="Workspace Stuff">
 							</a>
 							<div class="portfolio-overlay">
@@ -253,7 +329,7 @@
 						</div>
 						<div class="portfolio-desc">
 							<h3><a href="portfolio-single-video.html">T-Shirt Yellow</a></h3>
-							<span>Price: <strong>Rs. 2000/-</strong></span>
+							<span>Rs. 2000/ <t class="und">Rs.  400/-</t></span>
 						</div>
 					</div>
 				</div>
@@ -262,6 +338,8 @@
 					<div class="iportfolio">
 						<div class="portfolio-image">
 							<a href="portfolio-single.html">
+																<div class="sale-item icn">-30%</div>
+
 								<img src="images/products/p1.jpg" alt="Workspace Stuff">
 							</a>
 							<div class="portfolio-overlay">
@@ -271,7 +349,7 @@
 						</div>
 						<div class="portfolio-desc">
 							<h3><a href="portfolio-single.html">Console Shirt</a></h3>
-							<span>Price: <strong>Rs. 5900/-</strong></span>
+							<span>Rs. 2000/ <t class="und">Rs.  400/-</t></span>
 						</div>
 					</div>
 				</div>
@@ -280,6 +358,8 @@
 					<div class="iportfolio">
 						<div class="portfolio-image">
 							<a href="portfolio-single-video.html">
+																<div class="sale-item icn">-30%</div>
+
 								<img src="images/products/girl2.jpg" alt="Workspace Stuff">
 							</a>
 							<div class="portfolio-overlay">
@@ -289,7 +369,7 @@
 						</div>
 						<div class="portfolio-desc">
 							<h3><a href="portfolio-single-video.html">Skirt Red</a></h3>
-							<span>Price: <strong>Rs. 850/-</strong></span>
+							<span>Rs. 2000/ <t class="und">Rs.  400/-</t></span>
 						</div>
 					</div>
 				</div>
@@ -298,7 +378,9 @@
 					<div class="iportfolio">
 						<div class="portfolio-image">
 							<a href="portfolio-single.html">
-								<img src="images/products/p8.jpg" alt="Workspace Stuff">
+								<img src="images/products/pg8.jpg" alt="Workspace Stuff">
+																<div class="sale-item icn">-30%</div>
+
 							</a>
 							<div class="portfolio-overlay">
 								<a href="images/portfolio/full/8.jpg" class="left-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>
@@ -307,7 +389,7 @@
 						</div>
 						<div class="portfolio-desc">
 							<h3><a href="portfolio-single.html">Shirt Glow</a></h3>
-							<span>Price: <strong>Rs. 2000/-</strong></span>
+							<span>Rs. 2000/ <t class="und">Rs.  400/-</t></span>
 						</div>
 					</div>
 				</div>
@@ -325,7 +407,7 @@
 						</div>
 						<div class="portfolio-desc">
 							<h3><a href="portfolio-single-video.html">Pink Dress Shirts</a></h3>
-							<span>Price: <strong>Rs. 3500/-</strong></span>
+							<span>Rs. 2000/ <t class="und">Rs.  400/-</t></span>
 						</div>
 					</div>
 				</div>

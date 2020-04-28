@@ -1,216 +1,115 @@
-	<footer id="footer" class="dark">
+	<div style="background: #f7f7f7;    padding: 60px;" class="">
 
-			<div class="container">
+		<center>
+			<h4>Subscribe to our newsletter</h4>
+			
+			<p>Signup for our newsletter to stay up to date on sales and events.</p>
 
-				<!-- Footer Widgets
-				============================================= 
-				<div class="footer-widgets-wrap clearfix">
-
-					<div class="col_two_third">
-
-						<div class="col_one_third">
-
-							<div class="widget clearfix">
-
-								<img src="images/footer-widget-logo.png" alt="" class="footer-logo">
-
-								<p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards.</p>
-
-								<div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
-									<address>
-										<strong>Headquarters:</strong><br>
-										795 Folsom Ave, Suite 600<br>
-										San Francisco, CA 94107<br>
-									</address>
-									<abbr title="Phone Number"><strong>Phone:</strong></abbr> (91) 8547 632521<br>
-									<abbr title="Fax"><strong>Fax:</strong></abbr> (91) 11 4752 1433<br>
-									<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
-								</div>
-
-							</div>
-
-						</div>
-
-						<div class="col_one_third">
-
-							<div class="widget widget_links clearfix">
-
-								<h4>Blogroll</h4>
-
-								<ul>
-									<li><a href="https://codex.wordpress.org/">Documentation</a></li>
-									<li><a href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
-									<li><a href="https://wordpress.org/extend/plugins/">Plugins</a></li>
-									<li><a href="https://wordpress.org/support/">Support Forums</a></li>
-									<li><a href="https://wordpress.org/extend/themes/">Themes</a></li>
-									<li><a href="https://wordpress.org/news/">WordPress Blog</a></li>
-									<li><a href="https://planet.wordpress.org/">WordPress Planet</a></li>
-								</ul>
-
-							</div>
-
-						</div>
-
-						<div class="col_one_third col_last">
-
-							<div class="widget clearfix">
-								<h4>Recent Posts</h4>
-
-								<div id="post-list-footer">
-									<div class="spost clearfix">
-										<div class="entry-c">
-											<div class="entry-title">
-												<h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
-											</div>
-											<ul class="entry-meta">
-												<li>10th July 2014</li>
-											</ul>
-										</div>
-									</div>
-
-									<div class="spost clearfix">
-										<div class="entry-c">
-											<div class="entry-title">
-												<h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
-											</div>
-											<ul class="entry-meta">
-												<li>10th July 2014</li>
-											</ul>
-										</div>
-									</div>
-
-									<div class="spost clearfix">
-										<div class="entry-c">
-											<div class="entry-title">
-												<h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
-											</div>
-											<ul class="entry-meta">
-												<li>10th July 2014</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="col_one_third col_last">
-
-						<div class="widget clearfix" style="margin-bottom: -20px;">
-
-							<div class="row">
-
-								<div class="col-lg-6 bottommargin-sm">
-									<div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
-									<h5 class="nobottommargin">Total Downloads</h5>
-								</div>
-
-								<div class="col-lg-6 bottommargin-sm">
-									<div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
-									<h5 class="nobottommargin">Clients</h5>
-								</div>
-
-							</div>
-
-						</div>
-
-						<div class="widget subscribe-widget clearfix">
-							<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
-							<div class="widget-subscribe-form-result"></div>
-							<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="nobottommargin">
-								<div class="input-group divcenter">
-									<div class="input-group-prepend">
-										<div class="input-group-text"><i class="icon-email2"></i></div>
-									</div>
-									<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
-									<div class="input-group-append">
-										<button class="btn btn-success" type="submit">Subscribe</button>
-									</div>
-								</div>
-							</form>
-						</div>
-
-						<div class="widget clearfix" style="margin-bottom: -20px;">
-
-							<div class="row">
-
-								<div class="col-lg-6 clearfix bottommargin-sm">
-									<a href="#" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
-										<i class="icon-facebook"></i>
-										<i class="icon-facebook"></i>
-									</a>
-									<a href="#"><small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on Facebook</small></a>
-								</div>
-								<div class="col-lg-6 clearfix">
-									<a href="#" class="social-icon si-dark si-colored si-rss nobottommargin" style="margin-right: 10px;">
-										<i class="icon-rss"></i>
-										<i class="icon-rss"></i>
-									</a>
-									<a href="#"><small style="display: block; margin-top: 3px;"><strong>Subscribe</strong><br>to RSS Feeds</small></a>
-								</div>
-
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-				 .footer-widgets-wrap end -->
-
+			
+			
+			<div class="">
+				<input style="background: #00000000;min-width: 350px; border:1px solid black; padding: 10px; border-radius: 1px;color:white" type="email" name="contact[email]" id="Email" class="input-group__field newsletter__input" value="" placeholder="Enter Email Address" autocorrect="off" autocapitalize="off">
+				<button style="   min-width: 150px;    margin-left: -5px; background: #fdd01f; border:none; padding: 10px; border-radius: 1px;color:white" type="submit" class="btn newsletter__submit" name="commit" id="Subscribe">
+					<span style="   min-width: 150px;    margin-left: -5px; border:none; padding: 10px; border-radius: 1px;color:white" class="newsletter__submit-text--large">Join</span>
+				</button>
 			</div>
+			<br>
+			<center>
+				<i style="color: black; font-size: 28px" class="icon-facebook"></i>
+				<span>&nbsp; &nbsp;</span>
+				<i style="color: black; font-size: 28px" class="icon-instagram"></i>
+			</center>
 
-			<!-- Copyrights
-			============================================= -->
-			<div id="copyrights" style="background: #ecbf0c;color: #fff">
+		</center>
 
-				<div class="container clearfix">
 
-					<div class="col_half">
-						Copyrights &copy; 2014 All Rights Reserved by HipHop.<br>
+
+	</div>
+	<footer>
+		<div id="footer-wrapper" style="    background: #fdd01f;">
+
+			<div class="container" style="    background: #fdd01f;">
+				<div id="footer" class="row" style="    background: #fdd01f;">
+					
+					
+					
+					<div class="col-md-4">
+						<h4></h4>
+
+						<h4 class="ftext">Explore</h4>
+						<ul style="list-style:none">
+							
+							<li><a class="ftext" href="/search" title="">Search</a></li>
+							
+							<li><a class="ftext" href="/pages/about-us" title="">About Us</a></li>
+							
+							<li><a class="ftext" href="/pages/size-chart" title="">Size Chart</a></li>
+							
+							<li><a class="ftext" href="/pages/contact-us" title="">Contact Us</a></li>
+							
+							<li><a class="ftext" href="/pages/exchange-ploicy" title="">Exchange Policy</a></li>
+							
+						</ul>
 					</div>
+					
+					
+					
+					<div class="col-md-4">
+						<h4></h4>
+						<p></p><p>&nbsp;<strong>Address:</strong><br>Lahore, Pakistan</p>
+						<p><strong>Phone:</strong><br>042 12345678</p>
+						<p><strong>Email:</strong><br><a class="ftext" href="mailto:info@hiphop.pk">info@hiphop.pk</a></p>
+						<p><strong>Working Days/Hours:</strong><br>Mon - Sat / 9:30AM - 5:30PM</p><p></p>
+					</div>
+					
+					
+					
+					<div class="col-md-4">
+						<h4></h4>
 
-					<div class="col_half col_last tright">
-						<div class="fright clearfix">
-							<a href="#" class="social-icon si-small si-borderless si-facebook">
-								<i class="icon-facebook"></i>
-								<i class="icon-facebook"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-twitter">
-								<i class="icon-twitter"></i>
-								<i class="icon-twitter"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-pinterest">
-								<i class="icon-pinterest"></i>
-								<i class="icon-pinterest"></i>
-							</a>
+						<h4 class="ftext">Connect</h4>
+						<p>Join our mailing list for updates</p>
+						<div id="footer_signup">
+							<p></p>
+							
+							
+							<input style="background: white; border:none; padding: 10px; border-radius: 1px;" type="email" name="contact[email]" id="footer-EMAIL" placeholder="Enter Email Address">
+							<input style=" background: black; border:none; padding: 10px; border-radius: 1px;color:white" type="submit" id="footer-subscribe" value="Join">
+							
 						</div>
-
-						<div class="clear"></div>
-
-						<i class="icon-envelope2"></i> info@hiphop.pk <span class="middot">&middot;</span> <i class="icon-headphones"></i> +92-11-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> HipHopSupport
 					</div>
 
+					
+					
 				</div>
+				<div class="footerb">
+					<center>
+						<i style="color: white; font-size: 28px" class="icon-facebook"></i>
+						<span>&nbsp; &nbsp;</span>
+						<i style="color: white; font-size: 28px" class="icon-instagram"></i>
+						<p class="ftext">
+							Copyright © 2020 <a class="ftext" href="/" title="">Rollover Kids Company</a>
+						</p>
+						<br><br>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</footer>
 
-			</div><!-- #copyrights end -->
-
-		</footer><!-- #footer end -->
 
 	<!-- Go To Top
-	============================================= -->
-	<div id="gotoTop" class="icon-angle-up"></div>
+		============================================= -->
+		<div id="gotoTop" class="icon-angle-up"></div>
 
 	<!-- External JavaScripts
-	============================================= -->
-	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
+		============================================= -->
+		<script src="js/jquery.js"></script>
+		<script src="js/plugins.js"></script>
 
 	<!-- Footer Scripts
-	============================================= -->
-	<script src="js/functions.js"></script>
-	
+		============================================= -->
+		<script src="js/functions.js"></script>
+		
