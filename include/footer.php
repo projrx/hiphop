@@ -88,7 +88,7 @@
 						<span>&nbsp; &nbsp;</span>
 						<i style="color: black; font-size: 28px" class="icon-instagram"></i>
 						<p class="ftext">
-							Copyright © 2020 <a class="ftext" href="/" title="">Rollover Kids Company</a>
+							Copyright © 2020 <a class="ftext" href="/" title="">HipHop Company</a>
 						</p>
 						<br><br>
 					</center>
