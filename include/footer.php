@@ -84,9 +84,9 @@
 				</div>
 				<div class="footerb">
 					<center>
-						<i style="color: white; font-size: 28px" class="icon-facebook"></i>
+						<i style="color: black; font-size: 28px" class="icon-facebook"></i>
 						<span>&nbsp; &nbsp;</span>
-						<i style="color: white; font-size: 28px" class="icon-instagram"></i>
+						<i style="color: black; font-size: 28px" class="icon-instagram"></i>
 						<p class="ftext">
 							Copyright © 2020 <a class="ftext" href="/" title="">Rollover Kids Company</a>
 						</p>

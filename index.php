@@ -198,12 +198,12 @@
     position: relative;
     background-color: #EEE;
     border-top: none;
-    color: white;
+    color: black;
         padding: 20px;
 
 }
 .ftext{
-	color:white;
+	color:black;
 }
 
 			
@@ -225,11 +225,7 @@
 			<div class="fslider"  data-arrows="true">
 				<div class="flexslider">
 					<div class="slider-wrap">
-						<div class="slide">
-							<a href="#">
-								<img class="slideimg" src="images/slider/b1.jpg" alt="Shop Image">
-							</a>
-						</div>
+
 						<div class="slide">
 							<a href="#">
 								<img class="slideimg" src="images/slider/b2.jpg" alt="Shop Image">
@@ -245,7 +241,12 @@
 								<img class="slideimg" src="images/slider/b4.jpg" alt="Shop Image">
 							</a>
 						</div>
-
+	
+						<div class="slide">
+							<a href="#">
+								<img class="slideimg" src="images/slider/b1.jpg" alt="Shop Image">
+							</a>
+						</div>
 
 
 					</div>
@@ -378,7 +379,7 @@
 					<div class="iportfolio">
 						<div class="portfolio-image">
 							<a href="portfolio-single.html">
-								<img src="images/products/pg8.jpg" alt="Workspace Stuff">
+								<img src="images/products/p3.jpg" alt="Workspace Stuff">
 																<div class="sale-item icn">-30%</div>
 
 							</a>
@@ -398,7 +399,7 @@
 					<div class="iportfolio">
 						<div class="portfolio-image">
 							<a href="portfolio-single-video.html">
-								<img src="images/products/p6.jpg" alt="Workspace Stuff">
+								<img src="images/products/girl2.jpg" alt="Workspace Stuff">
 							</a>
 							<div class="portfolio-overlay">
 								<a href="https://vimeo.com/91973305" class="left-icon" data-lightbox="iframe"><i class="icon-line-play"></i></a>
