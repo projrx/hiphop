@@ -85,31 +85,7 @@
 				<a href="#" id=""><i class="icon-shopping-cart"></i><span>5</span></a>
 			</div>
 		</i>
-				<!--
-				<ul class="header-extras">
-					<li>
-						<i style="" class="i-medium i-circled i-bordered icon-thumbs-up2 nomargin bodgreen colgreen"></i>
-						<div class="he-text">
-							Original Brands
-							<span>100% Guaranteed</span>
-						</div>
-					</li>
-					<li>
-						<i  style="" class="i-medium i-circled i-bordered icon-truck2 nomargin colred bodred"></i>
-						<div class="he-text">
-							Free Shipping
-							<span>for $20 or more</span>
-						</div>
-					</li>
-					<li>
-						<i  class="i-medium i-circled i-bordered icon-undo nomargin colblue bodblue"></i>
-						<div class="he-text">
-							30-Day Returns
-							<span>Completely Free</span>
-						</div>
-					</li>
-				</ul>
-				-->
+		
 			</div>
 <center>
 			<div id="header-wrap">
@@ -124,53 +100,53 @@
 							<ul >
 								
 								<li style="min-width: 12%"><a href="#"><div>&nbsp;</div></a></li>
-								<li><a href="#"><div> New Arrivals <i class="thin"></i></div></a></li>
-								<li><a href="#"><div> Hot Sale <i class="thin"></i></div></a></li>
+								<li><a ><div> New Arrivals <i class="thin"></i></div></a></li>
+								<li><a href="shop.php"><div> Hot Sale <i class="thin"></i></div></a></li>
 		
-								<li><a href="#"><div> Boy <i class="icon-chevron-down thin"></i></div></a>
+								<li><a href="shop.php"><div> Boy <i class="icon-chevron-down thin"></i></div></a>
 								<ul class="dropdown-menu col-lg-6">
 										
-												<li><a href="#"><div>Jeans</div></a></li>
-												<li><a href="#"><div>Dresses</div></a></li>
-												<li><a href="#"><div>Shorts</div></a></li>
-												<li><a href="#"><div>T-Shirts</div></a></li>
-												<li><a href="#"><div>Pents</div></a></li>
+												<li><a href="shop.php"><div>Jeans</div></a></li>
+												<li><a href="shop.php"><div>Dresses</div></a></li>
+												<li><a href="shop.php"><div>Shorts</div></a></li>
+												<li><a href="shop.php"><div>T-Shirts</div></a></li>
+												<li><a href="shop.php"><div>Pents</div></a></li>
 																				</ul>
 									
 							</li><!-- .mega-menu end -->
 		
-								<li><a href="#"><div> Little Boy <i class="icon-chevron-down thin"></i></div></a>
+								<li><a href="shop.php"><div> Little Boy <i class="icon-chevron-down thin"></i></div></a>
 								<ul class="dropdown-menu col-lg-6">
 										
-												<li><a href="#"><div>Jeans</div></a></li>
-												<li><a href="#"><div>Dresses</div></a></li>
-												<li><a href="#"><div>Shorts</div></a></li>
-												<li><a href="#"><div>T-Shirts</div></a></li>
-												<li><a href="#"><div>Pents</div></a></li>
+												<li><a href="shop.php"><div>Jeans</div></a></li>
+												<li><a href="shop.php"><div>Dresses</div></a></li>
+												<li><a href="shop.php"><div>Shorts</div></a></li>
+												<li><a href="shop.php"><div>T-Shirts</div></a></li>
+												<li><a href="shop.php"><div>Pents</div></a></li>
 																				</ul>
 									
 							</li><!-- .mega-menu end -->
 		
-								<li><a href="#"><div> Girl <i class="icon-chevron-down thin"></i></div></a>
+								<li><a href="shop.php"><div> Girl <i class="icon-chevron-down thin"></i></div></a>
 								<ul class="dropdown-menu col-lg-6">
 										
-												<li><a href="#"><div>Jeans</div></a></li>
-												<li><a href="#"><div>Dresses</div></a></li>
-												<li><a href="#"><div>Shorts</div></a></li>
-												<li><a href="#"><div>T-Shirts</div></a></li>
-												<li><a href="#"><div>Pents</div></a></li>
+												<li><a href="shop.php"><div>Jeans</div></a></li>
+												<li><a href="shop.php"><div>Dresses</div></a></li>
+												<li><a href="shop.php"><div>Shorts</div></a></li>
+												<li><a href="shop.php"><div>T-Shirts</div></a></li>
+												<li><a href="shop.php"><div>Pents</div></a></li>
 																				</ul>
 									
 							</li><!-- .mega-menu end -->
 
-								<li><a href="#"><div>Little Girl <i class="icon-chevron-down thin"></i></div></a>
+								<li><a href="shop.php"><div>Little Girl <i class="icon-chevron-down thin"></i></div></a>
 								<ul class="dropdown-menu col-lg-6">
 										
-												<li><a href="#"><div>Jeans</div></a></li>
-												<li><a href="#"><div>Dresses</div></a></li>
-												<li><a href="#"><div>Shorts</div></a></li>
-												<li><a href="#"><div>T-Shirts</div></a></li>
-												<li><a href="#"><div>Pents</div></a></li>
+												<li><a href="shop.php"><div>Jeans</div></a></li>
+												<li><a href="shop.php"><div>Dresses</div></a></li>
+												<li><a href="shop.php"><div>Shorts</div></a></li>
+												<li><a href="shop.php"><div>T-Shirts</div></a></li>
+												<li><a href="shop.php"><div>Pents</div></a></li>
 																				</ul>
 									
 							</li><!-- .mega-menu end -->
