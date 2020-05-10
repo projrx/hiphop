@@ -8,16 +8,21 @@
 			
 			
 			<div class="">
-				<input style="background: #00000000;min-width: 350px; border:1px solid black; padding: 10px; border-radius: 1px;color:white" type="email" name="contact[email]" id="Email" class="input-group__field newsletter__input" value="" placeholder="Enter Email Address" autocorrect="off" autocapitalize="off">
+				<input style="background: #00000000;min-width: 40%; border:1px solid black; padding: 10px; border-radius: 1px;color:white" type="email" name="contact[email]" id="Email" class="input-group__field newsletter__input" value="" placeholder="Enter Email Address" autocorrect="off" autocapitalize="off">
+				<br>
 				<button style="   min-width: 150px;    margin-left: -5px; background: #fdd01f; border:none; padding: 10px; border-radius: 1px;color:white" type="submit" class="btn newsletter__submit" name="commit" id="Subscribe">
 					<span style="   min-width: 150px;    margin-left: -5px; border:none; padding: 10px; border-radius: 1px;color:white" class="newsletter__submit-text--large">Join</span>
 				</button>
 			</div>
 			<br>
 			<center>
+				<a href="<?php echo $facebook ?>">
 				<i style="color: black; font-size: 28px" class="icon-facebook"></i>
 				<span>&nbsp; &nbsp;</span>
+			</a>
+			<a href="<?php echo $insta ?>">
 				<i style="color: black; font-size: 28px" class="icon-instagram"></i>
+			</a>
 			</center>
 
 		</center>
@@ -38,17 +43,14 @@
 
 						<h4 class="ftext">Explore</h4>
 						<ul style="list-style:none">
-							
-							<li><a class="ftext" href="/search" title="">Search</a></li>
-							
-							<li><a class="ftext" href="/pages/about-us" title="">About Us</a></li>
-							
-							<li><a class="ftext" href="/pages/size-chart" title="">Size Chart</a></li>
-							
-							<li><a class="ftext" href="/pages/contact-us" title="">Contact Us</a></li>
-							
-							<li><a class="ftext" href="/pages/exchange-ploicy" title="">Exchange Policy</a></li>
-							
+				
+
+							<li><a class="ftext" href="products-eid-arrivals" title="">Eid Arrivals</a></li>
+							<li><a class="ftext" href="products-big-sale" title="">Big Sale</a></li>
+							<li><a class="ftext" href="products-little-girl" title="">Little Girl</a></li>
+							<li><a class="ftext" href="products-little-boy" title="">Little Boy</a></li>
+							<li><a class="ftext" href="contact" title="">Contact Us</a></li>
+														
 						</ul>
 					</div>
 					
@@ -56,10 +58,12 @@
 					
 					<div class="col-md-4">
 						<h4></h4>
-						<p></p><p>&nbsp;<strong>Address:</strong><br>Lahore, Pakistan</p>
-						<p><strong>Phone:</strong><br>042 12345678</p>
-						<p><strong>Email:</strong><br><a class="ftext" href="mailto:info@hiphop.pk">info@hiphop.pk</a></p>
-						<p><strong>Working Days/Hours:</strong><br>Mon - Sat / 9:30AM - 5:30PM</p><p></p>
+						<p></p><p>&nbsp;<strong>Address:</strong><br><?php echo $siteaddress ?></p>
+						<p><strong>Phone:</strong><br><?php echo $sitephone ?></p>
+						<p><strong>Email:</strong><br><a class="ftext" href="mailto:<?php echo $sitemail ?>"><?php echo $sitemail ?></a></p>
+
+						<?php echo $fpost ?>
+
 					</div>
 					
 					
@@ -84,12 +88,18 @@
 				</div>
 				<div class="footerb">
 					<center>
-						<i style="color: black; font-size: 28px" class="icon-facebook"></i>
-						<span>&nbsp; &nbsp;</span>
-						<i style="color: black; font-size: 28px" class="icon-instagram"></i>
+						<a href="<?php echo $facebook ?>">
+				<i style="color: black; font-size: 28px" class="icon-facebook"></i>
+				<span>&nbsp; &nbsp;</span>
+			</a>
+			<a href="<?php echo $insta ?>">
+				<i style="color: black; font-size: 28px" class="icon-instagram"></i>
+			</a>
+
 						<p class="ftext">
 							Copyright © 2020 <a class="ftext" href="/" title="">HipHop Company</a>
 						</p>
+						<span style="font-size: 10px;">Powered By: <a style="color:#fff" href="http://infotech4it.com" target="blank">InfoTech4iT</a></span>
 						<br><br>
 					</center>
 				</div>
@@ -115,3 +125,7 @@
 		============================================= -->
 		<script src="js/functions.js"></script>
 		
+		  <?php if(!empty($msg)){ ?>
+    <?php include 'include/snackbar.php'; ?>
+  <?php } ?>
+  

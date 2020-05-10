@@ -25,7 +25,6 @@
 				<div id="" class="row" data-margin="20" data-nav="true" data-pagi="false" data-items-xs="1" data-items-sm="2" data-items-md="2" data-items-lg="2">
 
 
-
 					<div class="col-md-4">
 						<div class="iportfolio">
 							<div class="portfolio-image">

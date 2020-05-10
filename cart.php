@@ -1,143 +1,151 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
 
-	<?php include 'include/head.php'; ?>
-	<!-- Document Title
-		============================================= -->
-		<title>Cart | HipHop</title>
+  <?php include 'include/head.php'; ?>
 
-	</head>
-
-	<body class="stretched">
-
-	<!-- Document Wrapper
-		============================================= -->
-		<div id="wrapper" class="clearfix">
-
-		<!-- Header
-			============================================= -->
-			<?php 	include 'include/header.php'; ?>
-
-			<div class="container">
-				<br><br>
+  <title>Cart </title>
 
 
-	<div class="row">
-		<div class="col-md-12">
-			<div class="panel panel-info">
-				<div class="panel-heading">
-					<div class="panel-title">
-						<div class="row">
-							<div class="col-md-6">
-								<h5><span class="glyphicon glyphicon-shopping-cart"></span> My Cart</h5>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="panel-body">
+  <?php if(!empty( $_GET['page_name'])) $link = $_GET['page_name'] ?>
+  <?php if(!empty( $_GET['client_name'])) $page = $_GET['client_name'] ?>
+  <?php if(empty( $_GET['page_name'])) $link = Null ?>
+  <?php if(empty( $_GET['client_name'])) $page = Null ?>
+  
+</head>
 
-					<div class="row">
-						<div class="col-md-2">Image
-						</div>
-						<div class="col-md-3">
-							<span class="btn-link">Product name</span>
-						</div>
-						<div class="col-md-6">
-							<div class="row">
-							<div class="col-md-5 text-center">
+<body class="body-wrapper">
 
-								<span >Price</span>
-							</div>
-							<div class="col-md-2">
-								<span>Quantity</span>
-							</div>
-							<div class="col-md-2">Remove						</div>
-							<div class="col-md-3 text-right">
-								<span>Total Price</span>
-							</div>
-						</div>
-						</div>
-					</div>
-					<hr>
-					<div class="row">
-						<div class="col-md-2"><img class="img-responsive" src="images/products/s1.jpg" width="100px;">
-						</div>
-						<div class="col-md-3">
-							<span class="btn-link">Product name</span>
-							<br><span><small>Product description</small></span	>
-						</div>
-						<div class="col-md-6">
-							<div class="row">
-							<div class="col-md-5 text-center">
-
-								<span >Rs. 2000/ <t class="und btn-link">Rs.  400/-</t></span>
-							</div>
-							<div class="col-md-2">
-								<input type="text" class="form-control input-sm" value="1">
-							</div>
-							<div class="col-md-2">
-								<button type="button" class="btn btn-link btn-xs">
-									<span class="glyphicon glyphicon-trash"> X</span>
-								</button>
-							</div>
-							<div class="col-md-3 text-right">
-								<button type="button" class="btn btn-link btn-xs">
-									<span class="glyphicon glyphicon-trash"> Rs. 5,000</span>
-								</button>
-							</div>
-						</div>
-						</div>
-					</div>
-					<hr>
+  <div class="main_wrapper">
+  <?php include 'include/header.php'; ?>
+<br>
 
 
-				</div>
-				<div class="panel-footer">
-					<div class="row">
-						<div class="col-md-9">
-						</div>
-						<div class="col-md-1">
-														<h4 class="text-left">Total</h4>
 
-						</div>
-						<div class="col-md-2">
-														<h4 class="text-right"> <strong>Rs. 5,000</strong></h4>
+  <div class="container pbg" style="  overflow: auto;">
 
-						</div>
-					</div>
+   
+      <h1>Shopping Cart</h1>
 
-					<div class="row">
-						<div class="col-md-9">
-						</div>
-						<div class="col-md-3">
-													
-    <button onchange="" class="pbtn" style="background: black; color:white"> Update Cart</button>
-    </a>
-    <br>
+    <table class="table ">
 
-    <button class="pbtn bgcolor"> Checkout </button>
+      <thead>
+        <th>Image</th>
+        <th style="min-width: 200px">Product</th>
+        <th>Size</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th style="min-width: 100px;">Manage</th>
+        <th>Total</th>
+      </thead>
+      <tbody>
+        <?php 
+
+        $rows =mysqli_query($con,"SELECT * FROM shop where status='cart' AND device='$device'" ) or die(mysqli_error($con));
+        $n=0;
+        $stotal=0;
+
+        while($row=mysqli_fetch_array($rows)){
+
+          $oid = $row['id']; 
+          $pid = $row['pid']; 
+          $qty = $row['qty']; 
+          $size = $row['size']; 
 
 
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</div>
+          $rowsx =mysqli_query($con,"SELECT name,price FROM product where id='$pid' " ) or die(mysqli_error($con));
+          while($rowx=mysqli_fetch_array($rowsx)){
 
-				<br>
+            $price = $rowx['price'];  
+            $proname = $rowx['name']; 
+            $total = $qty*$price;
+            $stotal = $stotal+$total;
+          
+            $rowsxx =mysqli_query($con,"SELECT img FROM pimgs where pid='$pid'  and feat='1' LIMIT 1 " ) or die(mysqli_error($con));
+          while($rowxx=mysqli_fetch_array($rowsxx)){
+            $img = $rowxx['img']; 
+          }
 
-			</div>
+          ?>
 
-		<!-- Footer
-			============================================= -->
+        <form action="" method="post">
 
-			<?php  	include 'include/footer.php'; ?>
+      <tr class="product">
+        <td class="image">
+          <img style="width:50px; height: 50px" src="images/products/<?php echo $img ?>">
+        </td>
+        <td class="product-details">
+          <div class="product-title"><?php echo $proname ?></div>
+        </td>
+        <td class=""> <?php echo $size ?></td>
+        <td class="">Rs. <?php echo number_format($price) ?>/-</td>
+        <td class="product-quantity">
 
-			
-		</div><!-- #wrapper end -->
+          <input class="form-control" name="qty<?php echo $n ?>" style="max-width: 100px ;"  type="number" value="<?php echo $qty ?>" min="1">
+        </td>
+        <td class="product-removal">
+          <button name="upcart<?php echo $n ?>" value="<?php echo $oid ?>" class="btn bgcolor">
+            <i class="icon-save"></i>
+          </button>
+          <button name="rem<?php echo $n ?>" value="<?php echo $oid ?>" class="btn btn-danger">
+            <i class="icon-trash"></i>
+          </button>
+        </td>
+        <td class="product-line-price">Rs. <?php echo number_format($total) ?>/-</td>
+      </tr>
 
-	</body>
-	</html>
+      </form>
+
+      <?php $n++; } } ?>
+
+      <tr class="totals" style="height: 50px">
+        <td colspan="5" ></td>
+        <td class="text-right">
+          <strong>
+          Total: 
+            
+          </strong>
+
+        </td>
+        <td class="totals-item">
+          
+          <strong>
+          Rs. <?php echo number_format($stotal) ?>/-
+            
+          </strong> 
+
+        </td>
+      </tr>
+      <tr>
+        <td colspan="5"></td>
+        <td colspan="2">
+          <a href="address.php" class="btn bgcolor hoverwhite" style="width: 100%">
+            <div style="width: 100%">
+          Checkout
+        </div>
+        </a>
+      </td>
+      </tr>
+      </tbody>
+     </table> 
+    
+
+  </div>
+
+
+
+
+    <br><br>
+
+  
+
+  </div>
+<?php include 'include/footer.php'; ?>
+
+
+</body>
+
+</html>
+

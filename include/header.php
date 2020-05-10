@@ -6,161 +6,168 @@
 
 				<div class="col_half nobottommargin d-none d-md-block" style="display: block !important;">
 
-					<p class="nobottommargin"> <i class="icon-phone">	<strong> </i> Call:</strong> 1800-547-2145 |  <i class="icon-envelope"></i> <strong> Email:</strong> info@hiphop.pk</p>
+					<p class="nobottommargin"> <i class="icon-phone">	<strong> </i> Call:</strong><?php echo $sitephone ?> |  <i class="icon-envelope"></i> <strong> Email:</strong> <?php echo $sitemail ?></p>
 
 				</div>
 
 				<div class="col_half col_last fright nobottommargin">
 
 					<!-- Top Links
-					============================================= -->
-					<div class="top-links">
-						<ul>
+						============================================= -->
+						<div class="top-links">
+							<ul>
 
-							<li>
-								<i class="mobhide">
-							<div id="top-cart" style="margin-top: 12px;">
-							<a href="#" id="top-cart-trigger"><i class="icon-shopping-cart"></i><span>5</span> </a>
-							<div style="    width: 350px;    z-index: 9999;" class="top-cart-content">
-								<div class="top-cart-title">
-									<h4>Shopping Cart</h4>
-								</div>
-								<div class="top-cart-items">
-									<div class="top-cart-item clearfix">
-										<div class="top-cart-item-image">
-											<a href="#"><img src="images/products/p3.jpg" alt="Blue Round-Neck Tshirt" /></a>
-										</div>
-										<div class="top-cart-item-desc">
-											<a href="#">Blue Round-Neck Tshirt</a>
-											<span class="top-cart-item-price">$19.99</span>
-											<span class="top-cart-item-quantity">x 2</span>
-										</div>
-									</div>
-									<div class="top-cart-item clearfix">
-										<div class="top-cart-item-image">
-											<a href="#"><img src="images/products/p2.jpg" alt="Light Blue Denim Dress" /></a>
-										</div>
-										<div class="top-cart-item-desc">
-											<a href="#">Light Blue Denim Dress</a>
-											<span class="top-cart-item-price">$24.99</span>
-											<span class="top-cart-item-quantity">x 3</span>
-										</div>
-									</div>
-								</div>
-								<div class="top-cart-action clearfix">
-									<span class="fleft top-checkout-price">$114.95</span>
-									<button class="button button-3d button-small nomargin fright">View Cart</button>
-								</div>
+
+								<?php 
+								$rows =mysqli_query($con,"SELECT * FROM shop where status='cart' AND device='$device'" ) or die(mysqli_error($con));        $rowcount=mysqli_num_rows($rows);
+								?>
+								<li>
+									<i class="hidden-md">
+										<div id="top-cart" style="margin-top: 12px;">
+											<a href="#" id="top-cart-trigger"><i class="icon-shopping-cart"></i><span><?php echo $rowcount ?></span> </a>
+
+											<div style="width: 500px;z-index: 9999;" class="top-cart-content">
+												<div class="top-cart-title">
+													<h4>Shopping Cart</h4>
+												</div>
+												<table class="table table-striped">
+													<thead>
+														<tr>
+															<td>Image</td><td style="min-width: 200px">Name</td><td>Size</td><td>Qty</td><td></td><td>Price</td>
+														</tr>
+													</thead>
+													<tbody>
+
+														<?php 
+														$rows =mysqli_query($con,"SELECT * FROM shop where status='cart' AND device='$device'" ) or die(mysqli_error($con));
+														$rowcount=mysqli_num_rows($rows);
+														$n=0;      $stotal=0;
+
+														while($row=mysqli_fetch_array($rows)){
+															$oid = $row['id']; 
+															$pid = $row['pid']; 
+															$qty = $row['qty']; 
+															$size = $row['size']; 
+
+
+															$rowsx =mysqli_query($con,"SELECT name,price FROM product where id='$pid' " ) or die(mysqli_error($con));
+															while($rowx=mysqli_fetch_array($rowsx)){
+
+																$price = $rowx['price'];  
+																$proname = $rowx['name']; 
+																$total = $qty*$price;
+																$stotal = $stotal+$total;
+
+																$rowsxx =mysqli_query($con,"SELECT img FROM pimgs where pid='$pid'  and feat='1' LIMIT 1 " ) or die(mysqli_error($con));
+																while($rowxx=mysqli_fetch_array($rowsxx)){
+																	$image = $rowxx['img']; 
+																}
+
+																?>
+
+																<tr>
+																	<td><img src="images/products/<?php echo $image ?>" class="minicartimg"></td><td><?php echo $proname ?></td><td> <?php echo $size ?> </td><td> <?php echo $qty ?> </td><td> x </td><td><?php echo number_format($price) ?></td>
+																</tr><tr>
+																<?php } } ?>
+															</tbody>
+															<tfoot>
+																<tr>
+																	<td colspan="3" class="text-right">Total</td><td colspan="3">Rs.  <?php echo number_format($stotal) ?> </td>
+																</tr>
+																<tr>
+																	<td colspan="6" class="bgcolor text-center">
+
+																		<a href="cart.php" class="bgcolor textwhite"  > <div style="width: 100%"> <span class="hoverwhite"> View Cart </span> </div></a>
+																	</td>
+																</tr>
+															</tfoot>
+
+
+														</table>
+													</div>
+
+												</div><!-- #top-cart end -->
+											</i>
+										</li>
+									</ul>
+								</div><!-- .top-links end -->
+
 							</div>
-						</div><!-- #top-cart end -->
-					</i>
-							</li>
-						</ul>
-					</div><!-- .top-links end -->
 
-				</div>
+						</div>
 
-			</div>
-
-		</div><!-- #top-bar end -->
+					</div><!-- #top-bar end -->
 
 		<!-- Header
-		============================================= -->
-		<header id="header" class="sticky-style-2">
+			============================================= -->
+			<header id="header" class="sticky-style-2">
 
-			<div class="container clearfix">
-						<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+				<div class="container clearfix">
+					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
 
-				<center>
+					<center>
 				<!-- Logo
-				============================================= -->
-				<div id="logo">
-					<a href="index.html" class="standard-logo" data-dark-logo="images/.png"><img src="images/logo.png" alt="Logo"></a>
-					<a href="index.html" class="retina-logo" data-dark-logo="images/logo.png"><img src="images/logo.png" alt="Logo"></a>
+					============================================= -->
+					<div id="logo">
+						<a href="index" class="standard-logo" data-dark-logo="images/<?php echo $sitelogo ?>"><img src="images/<?php echo $sitelogo ?>" alt="Logo"></a>
+						<a href="index" class="retina-logo" data-dark-logo="images/<?php echo $sitelogo ?>"><img src="images/<?php echo $sitelogo ?>" alt="Logo"></a>
 
-				</div><!-- #logo end -->
-			</center>
-			<i class="deskhide mobdisplay">
-			<div id="top-cart">
-				<a href="#" id=""><i class="icon-shopping-cart"></i><span>5</span></a>
+					</div><!-- #logo end -->
+				</center>
+				<i class="deskhide mobdisplay">
+					<div id="top-cart">
+						<a href="cart.php" id=""><i class="icon-shopping-cart"></i><span>5</span></a>
+					</div>
+				</i>
+
 			</div>
-		</i>
-		
-			</div>
-<center>
-			<div id="header-wrap">
+			<center>
+				<div id="header-wrap">
 
 				<!-- Primary Navigation
-				============================================= -->
-				<nav id="primary-menu" class="style-2" style="background: #fdd01f;">
+					============================================= -->
+					<nav id="primary-menu" class="style-2 bgcolor">
 
-					<div class="container clearfix">
+						<div class="container clearfix">
 
 
 							<ul >
 								
-								<li style="min-width: 12%"><a href="#"><div>&nbsp;</div></a></li>
-								<li><a ><div> New Arrivals <i class="thin"></i></div></a></li>
-								<li><a href="shop.php"><div> Hot Sale <i class="thin"></i></div></a></li>
-		
-								<li><a href="shop.php"><div> Boy <i class="icon-chevron-down thin"></i></div></a>
-								<ul class="dropdown-menu col-lg-6">
-										
-												<li><a href="shop.php"><div>Jeans</div></a></li>
-												<li><a href="shop.php"><div>Dresses</div></a></li>
-												<li><a href="shop.php"><div>Shorts</div></a></li>
-												<li><a href="shop.php"><div>T-Shirts</div></a></li>
-												<li><a href="shop.php"><div>Pents</div></a></li>
-																				</ul>
-									
-							</li><!-- .mega-menu end -->
-		
-								<li><a href="shop.php"><div> Little Boy <i class="icon-chevron-down thin"></i></div></a>
-								<ul class="dropdown-menu col-lg-6">
-										
-												<li><a href="shop.php"><div>Jeans</div></a></li>
-												<li><a href="shop.php"><div>Dresses</div></a></li>
-												<li><a href="shop.php"><div>Shorts</div></a></li>
-												<li><a href="shop.php"><div>T-Shirts</div></a></li>
-												<li><a href="shop.php"><div>Pents</div></a></li>
-																				</ul>
-									
-							</li><!-- .mega-menu end -->
-		
-								<li><a href="shop.php"><div> Girl <i class="icon-chevron-down thin"></i></div></a>
-								<ul class="dropdown-menu col-lg-6">
-										
-												<li><a href="shop.php"><div>Jeans</div></a></li>
-												<li><a href="shop.php"><div>Dresses</div></a></li>
-												<li><a href="shop.php"><div>Shorts</div></a></li>
-												<li><a href="shop.php"><div>T-Shirts</div></a></li>
-												<li><a href="shop.php"><div>Pents</div></a></li>
-																				</ul>
-									
-							</li><!-- .mega-menu end -->
 
-								<li><a href="shop.php"><div>Little Girl <i class="icon-chevron-down thin"></i></div></a>
-								<ul class="dropdown-menu col-lg-6">
-										
-												<li><a href="shop.php"><div>Jeans</div></a></li>
-												<li><a href="shop.php"><div>Dresses</div></a></li>
-												<li><a href="shop.php"><div>Shorts</div></a></li>
-												<li><a href="shop.php"><div>T-Shirts</div></a></li>
-												<li><a href="shop.php"><div>Pents</div></a></li>
-																				</ul>
-									
-							</li><!-- .mega-menu end -->
+
+								<?php
+
+								$rows =mysqli_query($con,"SELECT name,slug FROM productcat ORDER BY ordr" ) or die(mysqli_error($con));      
+								while($row=mysqli_fetch_array($rows)){
+									$slug = $row['slug']; 
+									$name = $row['name'];
+									?>
+
+									<li><a href="products-<?php echo $slug ?>"><div> <?php echo $name ?> <i class="icon-chevron-down thin"></i></div></a>
+
+										<ul class="dropdown-menu col-lg-6">
+											<?php 
+											$rowsx =mysqli_query($con,"SELECT name,slug FROM productsubcat WHERE pslug='$slug' ORDER BY ordr" ) or die(mysqli_error($con));      
+											while($rowx=mysqli_fetch_array($rowsx)){
+												$cslug = $rowx['slug']; 
+												$cname = $rowx['name'];  ?>	
+												<li><a href="sproducts-<?php echo $cslug ?>"><div><?php echo $cname ?></div></a></li>
+											<?php } ?>
+
+										</ul>
+									</li><!-- .mega-menu end -->
+								<?php } ?>
 
 							</ul>
 
 						<!-- Top Cart
-						============================================= -->
-						<!-- #top-cart end -->
+							============================================= -->
+							<!-- #top-cart end -->
 
-					</div>
+						</div>
 
-				</nav><!-- #primary-menu end -->
+					</nav><!-- #primary-menu end -->
 
-			</div>
+				</div>
 
 		</header><!-- #header end -->
