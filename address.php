@@ -76,81 +76,73 @@
           <h2>Billing Details</h2>
           <br><br>
 
-<div class="row">
-          <div class="col-sm-6">     
-
-           First Name:
-           <input type="text" value="<?php if(!empty($bfirstname)) echo $bfirstname ; ?>" class="form-control myform" id="fname" name="firstname">
-
-         </div>
-         <div class="col-md-6"> 
-
-           Last Name:
+<table class="table">
+         <tr>
+          <td>             First Name:         </td>
+          <td>        <input type="text" value="<?php if(!empty($bfirstname)) echo $bfirstname ; ?>" class="form-control myform" id="fname" name="firstname">         </td>
+         </tr>
+         <tr>
+          <td>          Last Name:      </td>
+          <td>          
            <input type="text" value="<?php if(!empty($blastname)) echo $blastname ; ?>" class="form-control myform" id="lname" name="lastname">
-
-         </div>
-
-         <div class="col-md-6"> 
-          Address Line 1:
-          <input type="text" value="<?php if(!empty($baddress1)) echo $baddress1 ; ?>" class="form-control myform" id="address1" name="address1">
-
-        </div>
-        <div class="col-md-6"> 
-
-          Address Line 2:
-          <input type="text" value="<?php if(!empty($baddress2)) echo $baddress2 ; ?>" class="form-control myform" id="address2" name="address2">
-
-        </div>
-
-
-        <div class="col-md-8"> 
-          City:
-          <select style="border:solid 1px;" class="form-control myform" id="city" name="city">
-           <?php if(!empty($bcity)) { ?><option value="<?php echo $bcity ;?>"><?php echo $bcity ;?></option><?php } ?>
-
-           <!-- get single row data from database -->
-
-           <?php
-
+           </td>
+         </tr>
+         <tr>
+          <td>      Address Line 1:        </td>
+          <td>        
+            <input type="text" value="<?php if(!empty($baddress1)) echo $baddress1 ; ?>" class="form-control myform" id="address1" name="address1">       
+          </td>
+         </tr>
+         
+         <tr>
+          <td>    Address Line 2:        </td>
+          <td>        
+            
+          <input type="text" value="<?php if(!empty($baddress2)) echo $baddress2 ; ?>" class="form-control myform" id="address2" name="address2">       
+          </td>
+         </tr>
+         <tr>
+          <td>     City:      </td>
+          <td>        
+            
+             <select style="border:solid 1px;" class="form-control myform" id="city" name="city">
+           <?php if(!empty($bcity)) { ?><option value="<?php echo $bcity ;?>"><?php echo $bcity ;?></option><?php }
            $rows =mysqli_query($con,"SELECT * FROM cities" ) or die(mysqli_error($con));
-
            while($row=mysqli_fetch_array($rows)){
-
             $city = $row['city'];
-
             ?>
-
-
             <option value="<?php echo $city ;?>"><?php echo $city ;?></option>
-
           <?php } ?>
         </select>
+      
+          </td>
+         </tr>
 
 
-      </div>
+         <tr>
+          <td> Postal Code:      </td>
+          <td>        
+             <input type="text" value="<?php if(!empty($bpostalcode)) echo $bpostalcode ; ?>" class="form-control myform" id="postal" name="postalcode">       
+          </td>
+         </tr>
 
-      <div class="col-md-4"> 
-        Postal Code:
-        <input type="text" value="<?php if(!empty($bpostalcode)) echo $bpostalcode ; ?>" class="form-control myform" id="postal" name="postalcode">
+         <tr>
+          <td> Phone:      </td>
+          <td>        
+             <input type="text" value="<?php if(!empty($bphone)) echo $bphone ; ?>" class="form-control myform" id="phone" name="phone">      
+          </td>
+         </tr>
 
-      </div>
+         <tr>
+          <td> Email:     </td>
+          <td>        
+              <input type="text" value="<?php if(!empty($bemail)) echo $bemail ; ?>" class="form-control myform" id="email" name="email">       
+          </td>
+         </tr>
 
-      <div class="col-md-6">     
 
-       Phone:
-       <input type="text" value="<?php if(!empty($bphone)) echo $bphone ; ?>" class="form-control myform" id="phone" name="phone">
+</table>
 
-     </div>
-     <div class="col-md-6"> 
-
-       Email:
-       <input type="text" value="<?php if(!empty($bemail)) echo $bemail ; ?>" class="form-control myform" id="email" name="email">
-
-     </div>
-
-     <br>
-    
-   </div>
    </div>
 
    <div class="col-md-6"> 
@@ -158,83 +150,77 @@
     <h2>Shipping Details</h2>
     <br><br>
 
-   <div class="row">
-
-    <div class="col-md-6">     
-
-     First Name:
-     <input type="text" value="<?php if(!empty($sfirstname)) echo $sfirstname ; ?>" class="form-control myform" id="shipping_fname" name="shipping_firstname">
-
-   </div>
-   <div class="col-md-6"> 
-
-     Last Name:
-     <input type="text" value="<?php if(!empty($slastname)) echo $slastname ; ?>" class="form-control myform" id="shipping_lname" name="shipping_lastname">
-
-   </div>
-
-   <div class="col-md-6"> 
-    Address Line 1:
-    <input type="text" value="<?php if(!empty($saddress1)) echo $saddress1 ; ?>" class="form-control myform" id="shipping_address1" name="shipping_address1">
-
-  </div>
-  <div class="col-md-6"> 
-
-    Address Line 2:
-    <input type="text" value="<?php if(!empty($saddress2)) echo $saddress2 ; ?>" class="form-control myform" id="shipping_address2" name="shipping_address2">
-
-  </div>
 
 
-  <div class="col-md-8"> 
-    City:
-    <select style="border:solid 1px;" class="form-control myform" id="shipping_city" name="shipping_city">
-     <?php if(!empty($scity)) { ?><option value="<?php echo $scity ;?>"><?php echo $scity ;?></option><?php } ?>
-     <!-- get single row data from database -->
+<table class="table">
+         <tr>
+          <td>             First Name:         </td>
+          <td>          <input type="text" value="<?php if(!empty($sfirstname)) echo $sfirstname ; ?>" class="form-control myform" id="shipping_fname" name="shipping_firstname">         </td>
+         </tr>
+         <tr>
+          <td>          Last Name:      </td>
+          <td>          
+           <input type="text" value="<?php if(!empty($slastname)) echo $slastname ; ?>" class="form-control myform" id="shipping_lname" name="shipping_lastname">
+           </td>
+         </tr>
+         <tr>
+          <td>      Address Line 1:        </td>
+          <td>        
+          <input type="text" value="<?php if(!empty($saddress1)) echo $saddress1 ; ?>" class="form-control myform" id="shipping_address1" name="shipping_address1">     
+          </td>
+         </tr>
+         <tr>
+          <td>    Address Line 2:        </td>
+          <td>        
+            
+           <input type="text" value="<?php if(!empty($saddress2)) echo $saddress2 ; ?>" class="form-control myform" id="shipping_address2" name="shipping_address2">     
+          </td>
+         </tr>
+         <tr>
+          <td>     City:      </td>
+          <td>        
+            
+             <select style="border:solid 1px;" class="form-control myform" id="shipping_city" name="shipping_city">
+           <?php if(!empty($scity)) { ?><option value="<?php echo $scity ;?>"><?php echo $scity ;?></option>
+         <?php }
+           $rows =mysqli_query($con,"SELECT * FROM cities" ) or die(mysqli_error($con));
+           while($row=mysqli_fetch_array($rows)){
+            $city = $row['city'];
+            ?>
+            <option value="<?php echo $city ;?>"><?php echo $city ;?></option>
+          <?php } ?>
+        </select>
+      
+          </td>
+         </tr>
 
-     <?php
 
-     $rows =mysqli_query($con,"SELECT * FROM cities" ) or die(mysqli_error($con));
+         <tr>
+          <td> Postal Code:      </td>
+          <td>        
+             <input type="text" value="<?php if(!empty($spostalcode)) echo $spostalcode ; ?>" class="form-control myform" id="shipping_postal" name="shipping_postalcode">       
+          </td>
+         </tr>
 
-     while($row=mysqli_fetch_array($rows)){
+         <tr>
+          <td> Phone:      </td>
+          <td>        
+             <input type="text" value="<?php if(!empty($sphone)) echo $sphone ; ?>" class="form-control myform" id="shipping_phone" name="shipping_phone">      
+          </td>
+         </tr>
 
-      $city = $row['city'];
+         <tr>
+          <td> Email:     </td>
+          <td>        
+      <input type="text" value="<?php if(!empty($semail)) echo $semail ; ?>" class="form-control myform" id="shipping_email" name="shipping_email">
 
-      ?>
-
-
-      <option value="<?php echo $city ;?>"><?php echo $city ;?></option>
-
-    <?php } ?>
-  </select>
+          </td>
+         </tr>
 
 
-</div>
-
-<div class="col-md-4"> 
-  Postal Code:
-  <input type="text" value="<?php if(!empty($spostalcode)) echo $spostalcode ; ?>" class="form-control myform" id="shipping_postal" name="shipping_postalcode">
-
-</div>
-
-<div class="col-md-6">     
-
- Phone:
- <input type="text" value="<?php if(!empty($sphone)) echo $sphone ; ?>" class="form-control myform" id="shipping_phone" name="shipping_phone">
-
-</div>
-<div class="col-md-6"> 
-
- Email:
- <input type="text" value="<?php if(!empty($semail)) echo $semail ; ?>" class="form-control myform" id="shipping_email" name="shipping_email">
-
-</div>
-
+</table>
 
 </div>
-
-</div>
-
 </div>
 
 

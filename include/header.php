@@ -151,7 +151,7 @@
 											while($rowx=mysqli_fetch_array($rowsx)){
 												$cslug = $rowx['slug']; 
 												$cname = $rowx['name'];  ?>	
-												<li><a href="sproducts-<?php echo $cslug ?>"><div><?php echo $cname ?></div></a></li>
+												<li style="display: block !important;"><a href="sproducts-<?php echo $cslug ?>"><div><?php echo $cname ?></div></a></li>
 											<?php } ?>
 
 										</ul>
