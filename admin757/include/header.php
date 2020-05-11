@@ -148,7 +148,7 @@ position: absolute;
 #minwidth{
   width: 100px !important;
   max-width: 100px !important;
-  overflow: auto !important;
+  overflow: hidden !important;
 }
 
 
