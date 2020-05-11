@@ -14,6 +14,11 @@
   <?php if(empty( $_GET['page_name'])) $link = Null ?>
   <?php if(empty( $_GET['client_name'])) $page = Null ?>
   
+  <style type="text/css">
+    td{
+      text-align:left  !important;
+    }
+  </style>
 </head>
 
 <body class="body-wrapper">
@@ -76,7 +81,7 @@
           <h2>Billing Details</h2>
           <br><br>
 
-<table class="table">
+<table class="table text-left">
          <tr>
           <td>             First Name:         </td>
           <td>        <input type="text" value="<?php if(!empty($bfirstname)) echo $bfirstname ; ?>" class="form-control myform" id="fname" name="firstname">         </td>
@@ -93,7 +98,7 @@
             <input type="text" value="<?php if(!empty($baddress1)) echo $baddress1 ; ?>" class="form-control myform" id="address1" name="address1">       
           </td>
          </tr>
-         
+
          <tr>
           <td>    Address Line 2:        </td>
           <td>        
