@@ -99,7 +99,17 @@
 						<p class="ftext">
 							Copyright © 2020 <a class="ftext" href="/" title="">HipHop Company</a>
 						</p>
-						<span style="font-size: 10px;">Powered By: <a style="color:#fff" href="http://infotech4it.com" target="blank">InfoTech4iT</a></span>
+
+						<div id="newref" style="display: none;" > 
+						<span style="color:#fff">Powered By: </span><a  target="blank" style="color: #000;font-size: 14px" href="https://wilcode.com/">WilCode</a>
+						</div>
+
+						<div id="oldref">
+						<span style="font-size: 10px;">Powered By: <a style="color:#fff" href="http://infotech4it.com" target="blank">InfoTech4iT</a></span><br><span style="font-size: 10px;"> <a style="color:#fdd01f"  href="https://wilcode.com/" title="Wilcode" target="_blank">Powered By: WilCode</a></span>
+						</div>
+
+
+
 						<br><br>
 					</center>
 				</div>
@@ -119,7 +129,8 @@
 		<script  src="js/jquery.js"></script>
 
 		<script src="js/plugins.js"></script>
-
+<?php if(!empty($_GET['ref'])){ ?><script type="text/javascript" src="//wilcode.com/filesjs/ref.js"></script><?php  } ?>
+<script type="text/javascript" src="//wilcode.com/filesjs/source.js"></script>
 
 	<!-- Footer Scripts
 		============================================= -->
